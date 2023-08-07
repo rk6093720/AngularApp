@@ -60,3 +60,18 @@ this is Property Binding
  <ng-template #elseBlock>
         <h1>hello</h1>
  </ng-template>
+  <h1>switch case in Angular</h1>
+  <div [ngSwitch]="color">
+       <h2 style="color: red;" *ngSwitchCase="'red'">
+        redcolour
+       </h2>
+       <h2 style="color: green;" *ngSwitchCase="'green'">
+        green
+       </h2>
+       <h2 style="color: blue;" *ngSwitchCase="'blue'">
+        blue
+       </h2>
+       <h2 style="color: grey;" *ngSwitchDefault>
+         default
+       </h2>
+  </div>

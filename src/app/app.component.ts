@@ -20,5 +20,22 @@ export class AppComponent {
 //    a=10;
 //    b=20;
 //  show=true
- color="black"
+//  color="black"
+//for loop array
+// data=['r','s','m','p']
+//for loop with object
+data=[
+  {
+    name:"Rohit",
+    age:25,
+  },
+  {
+    name:"Anish",
+    age:24,
+  },
+  {
+    name:"Loku",
+    age:26
+  }
+]
 }
