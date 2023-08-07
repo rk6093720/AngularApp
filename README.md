@@ -27,33 +27,33 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
 # notes
-   <!-- <h1 (mouseover)="getName('over-hello')" style="background-color: red;">name:{{name}}</h1> -->
-  <!-- keyup,keydown -->
-  <!-- <input type="text" #box (blur)="getName(box.value)"/> -->
-  <!-- <br> -->
-  <!-- <button (click)="getName('e')">Click</button> -->
-  <!-- <h1 (mouseleave)="getName('leave-hello')" style="background-color: green;">name:{{name}}</h1> -->
- <!-- this is the event binding -->
-   <!-- <input type="text" (keyup)="getName($event)"/>
-   -->
-   <!-- <input type="text" #box />
+   <h1 (mouseover)="getName('over-hello')" style="background-color: red;">name:{{name}}</h1>
+  keyup,keydown
+  <input type="text" #box (blur)="getName(box.value)"/>
+  <br>
+  <button (click)="getName('e')">Click</button>
+  <h1 (mouseleave)="getName('leave-hello')" style="background-color: green;">name:{{name}}</h1>
+ this is the event binding
+   <input type="text" (keyup)="getName($event)"/>
+  
+   <input type="text" #box />
  <button (click)="getName(box.value)">Add</button>
- <h1>{{name}}</h1> when we click on buttion we get value from the input field -->
- <!-- this is Property Binding  -->
+ <h1>{{name}}</h1> when we click on buttion we get value from the input field
+this is Property Binding 
  <input type="text" [disabled]="disable" [value]="name">
  disabled Property is working in the property Binding
-  <!-- Property Binding  -->
+  Property Binding 
  <br> <br>
  <input type="text"  disabled={{disable}} value={{name}}>
  disabled Property is not working in the interpolation
- <!-- This is interpolation -->
+ This is interpolation
  <br><br>
  <button (click)="enablebox()">Enable</button>
  /*****************************************/
   <h1>condition in Angular</h1>
- <!-- <div *ngIf="show else elseBlock">
+ <div *ngIf="show else elseBlock">
   if Block
- </div> -->
+ </div>
  <ng-template [ngIf]="show==true">
    {{show}}
  </ng-template>

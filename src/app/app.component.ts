@@ -17,8 +17,8 @@ export class AppComponent {
   //      this.disable=false
   //      console.log(this.disable)
   // }
-   a=10;
-   b=20;
- show=true
-
+//    a=10;
+//    b=20;
+//  show=true
+ color="black"
 }
