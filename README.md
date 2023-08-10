@@ -75,3 +75,20 @@ this is Property Binding
          default
        </h2>
   </div>
+ <h1>for loop in Angular</h1>
+  this is ngfor working in array when we give data of array of object .it gives output like [object,object]
+  <div *ngFor="let item of data">
+     {{item}}
+  </div>
+  <table border="1">
+    <tr>
+      <td>name</td>
+      <td>age</td>
+    </tr>
+    <tr *ngFor="let item of data">
+      <td>{{item.name}}</td>
+      <td>{{item.age}}</td>
+    </tr>
+
+
+  </table>

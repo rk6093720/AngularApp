@@ -24,18 +24,28 @@ export class AppComponent {
 //for loop array
 // data=['r','s','m','p']
 //for loop with object
-data=[
-  {
-    name:"Rohit",
-    age:25,
-  },
-  {
-    name:"Anish",
-    age:24,
-  },
-  {
-    name:"Loku",
-    age:26
-  }
-]
+// data=[
+//   {
+//     name:"Rohit",
+//     age:25,
+//   },
+//   {
+//     name:"Anish",
+//     age:24,
+//   },
+//   {
+//     name:"Loku",
+//     age:26
+//   }
+// ]
+color="blue"
+flag=true
+submit(value:any){
+console.log(value);
+
+}
+updateColor(){
+  this.flag=!this.flag
+  this.color="violet"
+}
 }
