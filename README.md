@@ -89,7 +89,26 @@ this is Property Binding
       <td>{{item.name}}</td>
       <td>{{item.age}}</td>
     </tr>
+<h1>Simple forms</h1>
+ <form #simpleForm="ngForm" (ngSubmit)="submit(simpleForm.value)">
+  <input type="text" ngModel name="name"
+  placeholder="enter your name">
+  <br>
+  <input type="email" ngModel name="email"
+  placeholder="enter your email">
+  <br>
+  <input type="password" ngModel name="password"
+  placeholder="enter your password">
+   <div>
+    <button>Submit</button>
+  </div>
+ </form>
+ <!-- ................ -->
+ <h1>Make header and footer</h1>
+ <app-header></app-header>
+  <app-footer></app-footer>
 
+<<<<<<< HEAD
 
 
   </table>
@@ -178,3 +197,12 @@ Data Relationships	Maintains relationships with foreign keys	Supports embedded d
 Data Integrity	Enforced by the schema	May require application-level checks
 Query Language	SQL (Structured Query Language)	BSON-based queries
 Use Cases	Business applications, reporting, analytics	Real-time analytics, content management
+=======
+  <!-- **************************************************  -->
+  <h1>Style Binding in angular</h1>
+  <h1 style="color: red;">heading 1 normal css</h1>
+  <h1 [style.color]="'red'">heading2 style binding </h1>
+  <h2 [style.color]="!flag ? 'red':color">heading 3 Dynamic css</h2> 
+  <button (click)="updateColor()">click color</button>
+  </table>
+>>>>>>> 18400d88434ddcb7e25bed642890d62a0328b0e8
