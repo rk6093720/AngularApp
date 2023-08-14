@@ -107,10 +107,6 @@ this is Property Binding
  <h1>Make header and footer</h1>
  <app-header></app-header>
   <app-footer></app-footer>
-
-<<<<<<< HEAD
-
-
   </table>
 
   # Todoapp in react 
@@ -197,7 +193,6 @@ Data Relationships	Maintains relationships with foreign keys	Supports embedded d
 Data Integrity	Enforced by the schema	May require application-level checks
 Query Language	SQL (Structured Query Language)	BSON-based queries
 Use Cases	Business applications, reporting, analytics	Real-time analytics, content management
-=======
   <!-- **************************************************  -->
   <h1>Style Binding in angular</h1>
   <h1 style="color: red;">heading 1 normal css</h1>
@@ -205,4 +200,3 @@ Use Cases	Business applications, reporting, analytics	Real-time analytics, conte
   <h2 [style.color]="!flag ? 'red':color">heading 3 Dynamic css</h2> 
   <button (click)="updateColor()">click color</button>
   </table>
->>>>>>> 18400d88434ddcb7e25bed642890d62a0328b0e8
