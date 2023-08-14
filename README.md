@@ -91,4 +91,90 @@ this is Property Binding
     </tr>
 
 
+
   </table>
+
+  # Todoapp in react 
+  import React, {  useState } from "react";
+
+const Todo =()=>{
+    const [text,setText]= useState("");
+    const [data,setData]= useState([]);
+    const [toggle,setToggle]= useState(true);
+    const [edit,setEdit]= useState(null);
+     const handleAdd=()=>{
+       if(!toggle){
+          let editTodo= data.map((item)=>{
+              if(item.id === edit){
+                return {...item, name:text}
+              }
+              return item;
+          })
+          setData(editTodo);
+          setText("")
+          setToggle(true);
+          setEdit(null)
+          
+       }else{
+        setData([...data, {id: data.length + 1,name:text,
+        }])
+        setText("");  
+       }
+        
+       }
+
+
+    const handleEdit=(id)=>{
+      let newTodo = data.map((item)=>{
+        if(item.id === id)
+        {
+          return item.name
+        }
+      })
+      console.log(newTodo);
+      setToggle(false)
+      setText(newTodo)
+      setEdit(id)
+        // console.log(newTodo.name)
+    }
+    const handleDelete=(id)=>{
+         let deleteTodo= data.filter((item)=>{
+           return item.id !== id;
+         })
+         setData(deleteTodo)
+    }
+  return (
+   <div>
+      <input type="text"
+      value={text}
+      placeholder="enter your text"
+      onChange={(e)=> setText(e.target.value)}/>
+      <button onClick={handleAdd}>{toggle ? "Add" :"Edit"}</button>
+      {
+        data.map((item)=>{
+          return <div key={item.id}>
+             <div>{item.name} </div>
+             <button onClick={()=> handleEdit(item.id)}>Edit</button>
+            <button onClick={()=> handleDelete(item.id)}>Delete</button>
+            </div>
+        })
+      }
+   </div>
+  )
+}
+export default Todo;
+
+Sure, here's a table that highlights some key differences between SQL (relational databases) and MongoDB (a NoSQL document-oriented database):
+
+Feature	SQL (Relational)	MongoDB (NoSQL)
+Data Model	Tabular (Tables with rows and columns)	Document-Oriented (JSON-like documents)
+Schema	Fixed, predefined schema	Flexible, dynamic schema
+Scaling	Vertical (Scaling up)	Horizontal (Scaling out)
+Joins	Supports complex joins	Limited support for joins
+Transactions	ACID-compliant (Atomic, Consistent, Isolated, Durable)	Limited ACID support
+Flexibility	Well-structured data	Semi-structured, diverse data
+Performance	Great for complex queries and analytics	Great for read-heavy, simple queries
+Data Relationships	Maintains relationships with foreign keys	Supports embedded documents, references
+Data Integrity	Enforced by the schema	May require application-level checks
+Query Language	SQL (Structured Query Language)	BSON-based queries
+Use Cases	Business applications, reporting, analytics	Real-time analytics, content management

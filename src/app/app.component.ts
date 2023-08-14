@@ -6,8 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'my-app';
-  name='Rohit';
+  // title = 'my-app';
+  // name='Rohit';
   // getName(value:any){
   //   this.name=value
   //   console.log(value)
@@ -38,14 +38,35 @@ export class AppComponent {
 //     age:26
 //   }
 // ]
-color="blue"
-flag=true
-submit(value:any){
-console.log(value);
+// color="blue"
+// flag=true
+// submit(value:any){
+// console.log(value);
 
-}
-updateColor(){
-  this.flag=!this.flag
-  this.color="violet"
+// }
+// updateColor(){
+//   this.flag=!this.flag
+//   this.color="violet"
+// }
+//pass data from parent to the child component
+// data = "Rohit"
+// data = [
+//   {
+//     name:"ROhit",
+//     age:22,
+//   },
+//   {
+//     name:"ROhit",
+//     age:22,
+//   },
+//   {
+//     name:"ROhit",
+//     age:22,
+//   }
+// ]
+// pass data from child to parent Component
+name ='';
+parentData(data:any){
+  this.name =data.name
 }
 }

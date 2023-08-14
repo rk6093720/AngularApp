@@ -6,6 +6,9 @@
   <title>Document</title>
 </head>
 <body>
+  <!-- ................ -->
+ <!-- <h1>Make header and footer</h1>
+ <app-header></app-header>
  <h1>Simple forms</h1>
  <form #simpleForm="ngForm" (ngSubmit)="submit(simpleForm.value)">
   <input type="text" ngModel name="name"
@@ -19,18 +22,27 @@
    <div>
     <button>Submit</button>
   </div>
- </form>
+ </form> -->
 
- <!-- ................ -->
- <h1>Make header and footer</h1>
- <app-header></app-header>
-  <app-footer></app-footer>
+ 
+ <!-- <h1>pass data from parent to child component</h1>
+ <div *ngFor="let user of data">
+ <app-users [hero]="user"></app-users>
+  </div> -->
 
-  <!-- **************************************************  -->
+<!-- 
   <h1>Style Binding in angular</h1>
   <h1 style="color: red;">heading 1 normal css</h1>
   <h1 [style.color]="'red'">heading2 style binding </h1>
   <h2 [style.color]="!flag ? 'red':color">heading 3 Dynamic css</h2> 
-  <button (click)="updateColor()">click color</button>
+  <button (click)="updateColor()">click color</button> -->
+<!-- 
+  <app-footer></app-footer> -->
+  <h1>Send data from child to parent component</h1>
+  <div>
+
+  <app-users (parentData)="parentData($event)"  ></app-users>
+  <h1>{{name}}</h1>
+  </div>
 </body>
 </html>
