@@ -1,4 +1,4 @@
-import { Component, OnInit,Output,EventEmitter } from '@angular/core';
+import { Component, OnInit,Input,Output,EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-users',
@@ -46,12 +46,12 @@ export class UsersComponent implements OnInit{
     // Access the event object with the $event argument passed to the output event handler:
     
     // <zippy (open)="onOpen($event)" (close)="onClose($event)"></zippy>
-    //  @Input() hero: any; 
+     @Input() hero: any; 
      //pass data from parent to child component that use in @Input
     //  Decorator that marks a class field as an input property and supplies configuration metadata. The input property is bound to a DOM property in the template. During change detection, Angular automatically updates the data property with the DOM property's value.
     constructor () {}
     ngOnInit(): void {
-      
+       this.hero
       // A callback method that is invoked immediately after the default change detector has checked the directive's data-bound properties for the first time, and before any of the view or content children have been checked. It is invoked only once when the directive is instantiated.
       
     }

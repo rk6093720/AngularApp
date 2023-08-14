@@ -25,8 +25,8 @@
  </form> -->
 
  
- <!-- <h1>pass data from parent to child component</h1>
- <div *ngFor="let user of data">
+ <!-- <h1>pass data from parent to child component</h1> -->
+ <!-- <div *ngFor="let user of data">
  <app-users [hero]="user"></app-users>
   </div> -->
 
@@ -38,11 +38,15 @@
   <button (click)="updateColor()">click color</button> -->
 <!-- 
   <app-footer></app-footer> -->
-  <h1>Send data from child to parent component</h1>
+  <!-- <h1>Send data from child to parent component</h1>
   <div>
 
   <app-users (parentData)="parentData($event)"  ></app-users>
   <h1>{{name}}</h1>
-  </div>
+  </div> -->
+//pipe
+<h1>Pipe in Angular</h1>
+<h1>{{name |uppercase | lowercase  }}</h1>
+<h1>{{today | date:"fullDate"}}</h1>
 </body>
 </html>

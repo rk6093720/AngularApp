@@ -6,6 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+// title(title: any) {
+//   throw new Error('Method not implemented.');
+// }
   // title = 'my-app';
   // name='Rohit';
   // getName(value:any){
@@ -65,8 +68,11 @@ export class AppComponent {
 //   }
 // ]
 // pass data from child to parent Component
-name ='';
-parentData(data:any){
-  this.name =data.name
-}
+// name ='';
+// parentData(data:any){
+//   this.name =data.name
+// }
+// pipe
+name="Rohit";
+today= Date.now();
 }
